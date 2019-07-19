@@ -7,8 +7,12 @@
 //
 
 #import "ViewController.h"
+#import "GCDUseViewController.h"
 
-@interface ViewController ()
+@interface ViewController ()<UITableViewDelegate,UITableViewDataSource>
+
+@property (nonatomic,strong)UITableView *tableView;
+@property (nonatomic,copy)NSArray *listArr;
 
 @end
 
@@ -16,6 +20,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    /*
     NSString *starTime = @"2019-03-08 17:20:00";
     NSString *endTime = @"2019-03-08 17:22:00";
     NSDateFormatter *formatter = [NSDateFormatter new];
@@ -25,9 +31,47 @@
     NSDate *starTimeDate = [formatter dateFromString:starTime];
     NSDate *endTimeDate = [formatter dateFromString:endTime];
     double intervalTime = [endTimeDate timeIntervalSinceReferenceDate ] - [starTimeDate timeIntervalSinceReferenceDate ];
+    */
     
+    [self.view addSubview:self.tableView];
 
 
+}
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
+    return self.listArr.count;
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
+    static NSString *cellIdentify = @"cell";
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentify];
+    if (!cell) {
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellIdentify];
+        
+    }
+    cell.textLabel.text = self.listArr[indexPath.row];
+    return cell;
+}
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    NSString *classStr = self.listArr[indexPath.row];
+    classStr = [classStr componentsSeparatedByString:@"&"].lastObject;
+    UIViewController *vc = [NSClassFromString(classStr) new];
+    [self.navigationController pushViewController:vc animated:YES];
+}
+- (UITableView *)tableView{
+    if (!_tableView) {
+        _tableView = [[UITableView alloc] initWithFrame:self.view.bounds style:UITableViewStylePlain];
+        _tableView.delegate = self;
+        _tableView.dataSource = self;
+        _tableView.rowHeight = 40;
+    }
+    return _tableView;
+}
+- (NSArray *)listArr{
+    if (!_listArr) {
+        _listArr = @[@"4、GCD的基本使用&GCDUseViewController",
+                     @"5、GCD线程间的通信&GCDCommunicationVC"];
+    }
+    return _listArr;
 }
 - (void)hhh{
     [ViewController _testAction:NO];

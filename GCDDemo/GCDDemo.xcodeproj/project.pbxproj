@@ -17,9 +17,12 @@
 		614C6957222E763400E94EA8 /* GCD 任务和队列.md in Resources */ = {isa = PBXBuildFile; fileRef = 614C6956222E763400E94EA8 /* GCD 任务和队列.md */; };
 		614C6959222E9ADB00E94EA8 /* GCD 的使用步骤.md in Resources */ = {isa = PBXBuildFile; fileRef = 614C6958222E9ADB00E94EA8 /* GCD 的使用步骤.md */; };
 		614C6962223234A400E94EA8 /* TestModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 614C6961223234A400E94EA8 /* TestModel.m */; };
+		617975D522E05D79006BD957 /* GCDCommunicationVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 617975D422E05D79006BD957 /* GCDCommunicationVC.m */; };
+		617975D822E06283006BD957 /* OtherViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 617975D722E06283006BD957 /* OtherViewController.m */; };
 		61F7222F223F7ED200BEEFBE /* GCD 的基本使用.md in Resources */ = {isa = PBXBuildFile; fileRef = 61F7222E223F7ED200BEEFBE /* GCD 的基本使用.md */; };
 		61F72231223F7F7600BEEFBE /* GCD 线程间的通信.md in Resources */ = {isa = PBXBuildFile; fileRef = 61F72230223F7F7600BEEFBE /* GCD 线程间的通信.md */; };
 		61F72233223F7FAC00BEEFBE /* GCD 的其他方法.md in Resources */ = {isa = PBXBuildFile; fileRef = 61F72232223F7FAC00BEEFBE /* GCD 的其他方法.md */; };
+		61F722CC2243A23000BEEFBE /* GCDUseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 61F722CB2243A23000BEEFBE /* GCDUseViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,9 +41,15 @@
 		614C6958222E9ADB00E94EA8 /* GCD 的使用步骤.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "GCD 的使用步骤.md"; sourceTree = "<group>"; };
 		614C6960223234A400E94EA8 /* TestModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestModel.h; sourceTree = "<group>"; };
 		614C6961223234A400E94EA8 /* TestModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestModel.m; sourceTree = "<group>"; };
+		617975D322E05D79006BD957 /* GCDCommunicationVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GCDCommunicationVC.h; sourceTree = "<group>"; };
+		617975D422E05D79006BD957 /* GCDCommunicationVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GCDCommunicationVC.m; sourceTree = "<group>"; };
+		617975D622E06283006BD957 /* OtherViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OtherViewController.h; sourceTree = "<group>"; };
+		617975D722E06283006BD957 /* OtherViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OtherViewController.m; sourceTree = "<group>"; };
 		61F7222E223F7ED200BEEFBE /* GCD 的基本使用.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "GCD 的基本使用.md"; sourceTree = "<group>"; };
 		61F72230223F7F7600BEEFBE /* GCD 线程间的通信.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "GCD 线程间的通信.md"; sourceTree = "<group>"; };
 		61F72232223F7FAC00BEEFBE /* GCD 的其他方法.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "GCD 的其他方法.md"; sourceTree = "<group>"; };
+		61F722CA2243A23000BEEFBE /* GCDUseViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GCDUseViewController.h; sourceTree = "<group>"; };
+		61F722CB2243A23000BEEFBE /* GCDUseViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GCDUseViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +115,8 @@
 			isa = PBXGroup;
 			children = (
 				61F72230223F7F7600BEEFBE /* GCD 线程间的通信.md */,
+				617975D322E05D79006BD957 /* GCDCommunicationVC.h */,
+				617975D422E05D79006BD957 /* GCDCommunicationVC.m */,
 			);
 			path = "5、GCD线程间的通信";
 			sourceTree = "<group>";
@@ -114,6 +125,8 @@
 			isa = PBXGroup;
 			children = (
 				61F7222E223F7ED200BEEFBE /* GCD 的基本使用.md */,
+				61F722CA2243A23000BEEFBE /* GCDUseViewController.h */,
+				61F722CB2243A23000BEEFBE /* GCDUseViewController.m */,
 			);
 			path = "4、GCD的基本使用";
 			sourceTree = "<group>";
@@ -122,6 +135,8 @@
 			isa = PBXGroup;
 			children = (
 				61F72232223F7FAC00BEEFBE /* GCD 的其他方法.md */,
+				617975D622E06283006BD957 /* OtherViewController.h */,
+				617975D722E06283006BD957 /* OtherViewController.m */,
 			);
 			path = "6、GCD的其他方法";
 			sourceTree = "<group>";
@@ -218,10 +233,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				617975D522E05D79006BD957 /* GCDCommunicationVC.m in Sources */,
 				614C693A222E6AB000E94EA8 /* ViewController.m in Sources */,
 				614C6945222E6AB100E94EA8 /* main.m in Sources */,
 				614C6937222E6AB000E94EA8 /* AppDelegate.m in Sources */,
 				614C6962223234A400E94EA8 /* TestModel.m in Sources */,
+				617975D822E06283006BD957 /* OtherViewController.m in Sources */,
+				61F722CC2243A23000BEEFBE /* GCDUseViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
